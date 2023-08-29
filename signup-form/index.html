@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup-Form-Animation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+     <div class="bg">
+        <img src="1.jpg" id="bg-img" alt="">
+     </div>
+     <div class="background-text">
+        <div class="container left">
+            <h1>Dont Have Account <br>SignUP Here...</h1>
+            <button id="left">Signup</button>
+        </div>
+        <div class="container right">
+            <h1>Already Have Account Login Here...</h1>
+            <button id="right">Login</button>
+        </div>
+        <div class="formBox">
+           <img src="1.jpg" id='formImg'alt="">
+            <form action="" id="signupForm">
+                <label for="name">Enter Name:</label>
+                <input type="text" id="name">
+                <label for="password">Enter Password:</label>
+                <input type="password" id="password">
+                <label for="password1">Re Enter Password:</label>
+                <input type="password" id="password1">
+                 <button>Signup</button>
+            </form>
+            <form action="" id="loginForm">
+                <label for="name">Enter Name:</label>
+                <input type="text" id="name">
+                <label for="password">Enter Password:</label>
+                <input type="password" id="password">
+              
+                 <button>Login</button>
+            </form>
+        </div>
+     </div>
+     <script>
+        var left = document.getElementById('left');
+        var right = document.getElementById('right');
+
+        right.onclick = function(){
+           document.querySelector('.formBox').style.transform = 'translateX(110%)'; 
+           document.getElementById('loginForm').style.left='0%';
+           document.getElementById('bg-img').src='2.jpg'
+           document.getElementById('formImg').src='2.jpg'
+           document.getElementById('signupForm').style.right='-100%';
+
+        }
+        left.onclick = function(){
+           document.querySelector('.formBox').style.transform = 'translateX(0%)'; 
+           document.getElementById('bg-img').src='1.jpg'
+           document.getElementById('formImg').src='1.jpg'
+           document.getElementById('loginForm').style.left='-100%';
+           document.getElementById('signupForm').style.right='0%';
+        }
+     </script>
+</body>
+</html>
